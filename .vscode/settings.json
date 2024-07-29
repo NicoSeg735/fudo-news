@@ -9,5 +9,15 @@
     "typescriptreact",
     "html"
   ],
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "workbench.colorCustomizations": {
+    "activityBarBadge.background": "#ff5023",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#882b14",
+    "sash.hoverBorder": "#ff7956",
+    "titleBar.activeBackground": "#460e00",
+    "titleBar.activeForeground": "#ff5023",
+    "titleBar.inactiveBackground": "#ff502399",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  }
 }
