@@ -17,16 +17,19 @@ export class NewsService {
 
   constructor(private http: HttpClient) {}
 
-  getNewsList(): Observable<INewsResult> {
+  getNewsList(query?: string): Observable<INewsResult> {
     const params = new HttpParams()
       .set('pageSize', '10')
       .set('language', 'es')
       .set('apiKey', this.API_KEY)
 
     return this.http
-      .get<INewsResult>(`${this.API_URL}everything?q=${'restaurant'}`, {
-        params
-      })
+      .get<INewsResult>(
+        `${this.API_URL}everything?q=${query ?? 'restaurant'}`,
+        {
+          params
+        }
+      )
       .pipe(
         map((result: INewsResult) => {
           result.articles = result.articles

@@ -5,13 +5,37 @@
   ></app-error-dialog>
 } @else {
   <div class="container">
-    <h1>Últimas noticias</h1>
-    <div class="container-cards">
-      @if (newsResult$ | async; as resultObject) {
-        @for (item of resultObject.articles; track item.url) {
-          <app-card [newInfo]="item" />
+    <h1>
+      @if (query) {
+        Mostrando resultados sobre: {{ query }}
+      } @else {
+        Últimas noticias
+      }
+    </h1>
+    @if (newsResult$ | async; as resultObject) {
+      @if (isLoading) {
+        <div class="loading">
+          <div>
+            <lucide-icon
+              name="rotate-cw"
+              [size]="18"
+              style="display: flex"
+            ></lucide-icon>
+          </div>
+        </div>
+      } @else {
+        @if (resultObject.articles.length === 0) {
+          <div class="no-results">
+            <p>No se encontraron resultados</p>
+          </div>
+        } @else {
+          <div class="container-cards">
+            @for (item of resultObject.articles; track item.url) {
+              <app-card [newInfo]="item" />
+            }
+          </div>
         }
       }
-    </div>
+    }
   </div>
 }

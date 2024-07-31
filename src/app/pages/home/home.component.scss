@@ -1,3 +1,5 @@
+@import 'src/styles.scss';
+
 .container {
   padding: 16px;
   width: 100%;
@@ -22,6 +24,38 @@
   width: 100%;
   max-width: 1000px;
   grid-template-columns: 1fr;
+}
+
+.no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #8a8c91;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  div {
+    animation: spin 1s linear infinite;
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  lucide-icon {
+    color: $primary-color;
+  }
 }
 
 @media (min-width: 600px) {
