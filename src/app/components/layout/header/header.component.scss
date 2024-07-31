@@ -1,10 +1,18 @@
 .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   padding: 8px 16px;
   background-color: white;
-  gap: 40px;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+  }
 }
 
 nav > ul {

@@ -4,9 +4,16 @@ a {
   text-decoration: none;
   height: 100%;
   display: block;
+  border-radius: 16px;
+  color: currentColor;
+  transition: all 0.2s ease-in-out;
 
   &:visited {
     color: currentColor;
+  }
+
+  &:hover {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -43,7 +50,14 @@ a {
   h3 {
     font-size: 20px;
     font-weight: 600;
+    color: currentColor;
   }
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
   p {
     font-size: 16px;

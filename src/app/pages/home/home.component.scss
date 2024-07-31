@@ -2,20 +2,31 @@
   padding: 16px;
   width: 100%;
   display: flex;
-  justify-content: center; /* Centrar el contenido horizontalmente */
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    width: 100%;
+    text-align: start;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    max-width: 1000px;
+  }
 }
 
 .container-cards {
   display: grid;
   gap: 16px;
   width: 100%;
-  max-width: 1000px; /* No tener un ancho mayor a 1000px */
-  grid-template-columns: 1fr; /* 1 columna por defecto */
+  max-width: 1000px;
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 600px) {
   .container-cards {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    grid-template-columns: repeat(2, 1fr);
   }
   .container {
     padding: 24px;
@@ -24,6 +35,6 @@
 
 @media (min-width: 900px) {
   .container-cards {
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+    grid-template-columns: repeat(3, 1fr);
   }
 }

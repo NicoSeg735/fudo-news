@@ -1,16 +1,17 @@
-<div class="container">
-  <div class="container-cards">
-    @if (newsResult$ | async; as resultObject) {
-      @for (item of resultObject.articles; track item.url) {
-        <app-card [newInfo]="item" />
-      }
-    }
-  </div>
-</div>
-
 @if (error) {
   <app-error-dialog
     [statusCode]="error.statusCode"
     [message]="error.message"
   ></app-error-dialog>
+} @else {
+  <div class="container">
+    <h1>Últimas noticias</h1>
+    <div class="container-cards">
+      @if (newsResult$ | async; as resultObject) {
+        @for (item of resultObject.articles; track item.url) {
+          <app-card [newInfo]="item" />
+        }
+      }
+    </div>
+  </div>
 }
