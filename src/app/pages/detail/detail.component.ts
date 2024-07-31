@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
+import { ErrorDialogComponent } from '@app/components/layout/error-dialog/error-dialog.component'
 import { INew } from '@app/interfaces/new'
 import { NewsService } from '@app/services/news.service'
+import { LucideAngularModule } from 'lucide-angular'
 
 @Component({
   selector: 'app-detail',
   standalone: true,
-  imports: [],
+  imports: [ErrorDialogComponent, LucideAngularModule],
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.scss']
 })
@@ -14,7 +16,8 @@ export class DetailComponent implements OnInit {
   public source: string = ''
   public slug: string = ''
   public article: INew | null = null
-  errorMessage: string | null = null
+  public error: { statusCode: number; message: string } | null = null
+  public publishedFormattedDate!: string
 
   constructor(
     private route: ActivatedRoute,
@@ -35,9 +38,16 @@ export class DetailComponent implements OnInit {
     this.newsService.getArticleBySlugAndSource(slug, source).subscribe({
       next: (article: INew) => {
         this.article = article
+
+        this.publishedFormattedDate = new Date(
+          article.publishedAt
+        ).toLocaleDateString()
       },
-      error: (err: Error) => {
-        this.errorMessage = err.message
+      error: (error) => {
+        this.error = {
+          statusCode: error.statusCode,
+          message: error.message
+        }
       }
     })
   }

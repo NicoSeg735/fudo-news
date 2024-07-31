@@ -12,7 +12,7 @@ import {
   withFetch,
   withInterceptors
 } from '@angular/common/http'
-import { LucideAngularModule, Search, RotateCw } from 'lucide-angular'
+import { LucideAngularModule, Search, RotateCw, Link } from 'lucide-angular'
 import { errorHandlerInterceptor } from './interceptors/error-handler.interceptor'
 
 export const appConfig: ApplicationConfig = {
@@ -21,6 +21,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideClientHydration(),
     provideHttpClient(withFetch(), withInterceptors([errorHandlerInterceptor])),
-    importProvidersFrom(LucideAngularModule.pick({ Search, RotateCw }))
+    importProvidersFrom(LucideAngularModule.pick({ Search, RotateCw, Link }))
   ]
 }

@@ -1,3 +1,30 @@
-<h1>Detail Page</h1>
-<p>Source: {{ source }}</p>
-<p>Slug: {{ slug }}</p>
+@if (error) {
+  <app-error-dialog
+    [statusCode]="error.statusCode"
+    [message]="error.message"
+  ></app-error-dialog>
+} @else {
+  <article class="container">
+    <div>
+      <h1>{{ article?.title }}</h1>
+      <div class="autor-date">
+        <span>{{ article?.author }}</span>
+        @if (publishedFormattedDate) {
+          <span>{{ publishedFormattedDate }}</span>
+        }
+      </div>
+      <div class="image-container">
+        @if (article?.urlToImage) {
+          <img [src]="article?.urlToImage" alt="Article Image" />
+        }
+      </div>
+      <p class="content">{{ article?.content }}</p>
+      <div class="source">
+        <lucide-icon name="link" size="14"></lucide-icon>
+        <a [href]="article?.url" target="_blank"
+          >Fuente: {{ article?.source?.name }}</a
+        >
+      </div>
+    </div>
+  </article>
+}

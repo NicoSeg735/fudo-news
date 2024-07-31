@@ -68,10 +68,12 @@ export class NewsService {
               generateSourceSlug(article.source.id ?? article.source.name) ===
               source
           )
-          console.log(articleFounded)
 
           if (!articleFounded) {
-            throw new Error('Article not found')
+            throw {
+              statusCode: 404,
+              message: 'Article not found'
+            }
           }
 
           return articleFounded

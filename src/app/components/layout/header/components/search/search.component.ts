@@ -1,7 +1,8 @@
 import { Component } from '@angular/core'
-import { Router } from '@angular/router'
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router'
 import { LucideAngularModule } from 'lucide-angular'
 import { FormsModule } from '@angular/forms'
+import { filter } from 'rxjs'
 
 @Component({
   selector: 'app-search',
@@ -13,7 +14,19 @@ import { FormsModule } from '@angular/forms'
 export class SearchComponent {
   searchQuery: string = ''
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        const hasQueryParam = this.route.snapshot.queryParamMap.has('q')
+        if (event.url === '/' || !hasQueryParam) {
+          this.searchQuery = ''
+        }
+      })
+  }
 
   onSearch(): void {
     if (this.searchQuery.trim()) {

@@ -100,3 +100,10 @@ app-header {
   left: 0px;
   right: 0px;
 }
+
+app-detail {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+}
