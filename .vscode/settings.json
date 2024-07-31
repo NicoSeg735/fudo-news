@@ -19,5 +19,6 @@
     "titleBar.activeForeground": "#ff5023",
     "titleBar.inactiveBackground": "#ff502399",
     "titleBar.inactiveForeground": "#e7e7e799"
-  }
+  },
+  "cSpell.words": ["Fudo"]
 }

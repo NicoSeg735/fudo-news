@@ -1,27 +1,27 @@
 # FudoNews
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
+FudoNews es una aplicación web para ver noticias, desarrollada como parte de un desafío para la empresa FUDO. La aplicación permite a los usuarios navegar y leer noticias de diversas categorías de manera sencilla y rápida.
 
-## Development server
+## Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Puedes ver la demo del proyecto en el siguiente enlace: [FudoNews Demo](https://nicoseg735.github.io/fudo-news/)
 
-## Code scaffolding
+## Servidor de desarrollo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Ejecuta `ng serve` para iniciar un servidor de desarrollo. Navega a `http://localhost:4200/`. La aplicación se recargará automáticamente si cambias alguno de los archivos fuente.
 
-## Build
+## Generación de código
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Ejecuta `ng generate component nombre-del-componente` para generar un nuevo componente. También puedes usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Running unit tests
+## Construcción
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ejecuta `ng build` para construir el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/`.
 
-## Running end-to-end tests
+## Ejecución de pruebas unitarias
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Ejecuta `ng test` para ejecutar las pruebas unitarias a través de [Karma](https://karma-runner.github.io).
 
-## Further help
+## Ejecución de pruebas end-to-end
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Ejecuta `ng e2e` para ejecutar las pruebas end-to-end a través de una plataforma de pruebas de tu elección.
