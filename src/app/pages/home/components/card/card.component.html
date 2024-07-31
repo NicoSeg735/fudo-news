@@ -1,0 +1,14 @@
+<a [routerLink]="['/', newInfo.source.slug, newInfo.slug]">
+  <div class="container">
+    <div class="card-image">
+      <img [src]="newInfo.urlToImage" alt="newInfo.title" />
+    </div>
+    <div class="card-content">
+      <h3>{{ newInfo.title }}</h3>
+      <p>{{ newInfo.description }}</p>
+      @if (newInfo.author) {
+        <p class="author">Autor: {{ newInfo.author }}</p>
+      }
+    </div>
+  </div>
+</a>

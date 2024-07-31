@@ -1,0 +1,29 @@
+.container {
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centrar el contenido horizontalmente */
+}
+
+.container-cards {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  max-width: 1000px; /* No tener un ancho mayor a 1000px */
+  grid-template-columns: 1fr; /* 1 columna por defecto */
+}
+
+@media (min-width: 600px) {
+  .container-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+  }
+  .container {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 900px) {
+  .container-cards {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+  }
+}

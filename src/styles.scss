@@ -1,1 +1,102 @@
-/* You can add global styles to this file, and also import other style files */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+$primary-color: #FF5023;
+$border-color: #cbd5e1;
+$placeholder-color: #94a3b8;
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1;
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: currentColor;
+
+  &.primary {
+    background: $primary-color;
+    border: none;
+    cursor: pointer;
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 6px;
+    color: white;
+  }
+}
+
+app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+app-home {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+app-error-dialog {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+app-header {
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  left: 0px;
+  right: 0px;
+}

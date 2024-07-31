@@ -1,13 +1,26 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core'
+import {
+  ApplicationConfig,
+  importProvidersFrom,
+  provideZoneChangeDetection
+} from '@angular/core'
 import { provideRouter } from '@angular/router'
 
 import { routes } from './app.routes'
 import { provideClientHydration } from '@angular/platform-browser'
+import {
+  provideHttpClient,
+  withFetch,
+  withInterceptors
+} from '@angular/common/http'
+import { LucideAngularModule, Search } from 'lucide-angular'
+import { errorHandlerInterceptor } from './interceptors/error-handler.interceptor'
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withFetch(), withInterceptors([errorHandlerInterceptor])),
+    importProvidersFrom(LucideAngularModule.pick({ Search }))
   ]
 }

@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  padding: 16px;
+  background-color: #111119;
+  color: white;
+}
+
+span {
+  font-size: 14px;
+  color: #909090;
+}
