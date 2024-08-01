@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1722524074589,
+  "timestamp": 1722524189995,
   "index": "/fudo-news/index.csr.html",
   "assetGroups": [
     {
@@ -68,7 +68,7 @@
     "/fudo-news/assets/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
     "/fudo-news/assets/img/fudo_logo.svg": "8733ee51f2615222fde81e3ad4a072b22dec0b6c",
     "/fudo-news/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "/fudo-news/index.html": "369f7f0bf538eb616ddcf35ce997d40ca9304e20",
+    "/fudo-news/index.html": "f5c23e358f8ca92a0349c6844623cffc43a35b2c",
     "/fudo-news/main-WU7DJJ4D.js": "bd13755fe2f5cbba269f0f982a04a5dbe049f257",
     "/fudo-news/manifest.webmanifest": "7e35182857bf99ecd65ce72262eb6906c5fb715b",
     "/fudo-news/polyfills-SCHOHYNV.js": "d45c76c5960bab3ace7fd6d211b9579456241f8a",
