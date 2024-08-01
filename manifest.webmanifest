@@ -1,6 +1,6 @@
 {
-  "name": "fudo-news",
-  "short_name": "fudo-news",
+  "name": "FUDO News",
+  "short_name": "FUDO News",
   "theme_color": "#FF5023",
   "background_color": "#FF5023",
   "description": "Fudo News es una aplicación web progresiva que te permite leer noticias de diferentes fuentes.",
@@ -42,7 +42,7 @@
       "src": "assets/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any"
     },
     {
       "src": "assets/icons/icon-384x384.png",
@@ -56,5 +56,10 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ]
+  ],
+  "id": "fudo-news",
+  "dir": "auto",
+  "lang": "es",
+  "orientation": "natural",
+  "categories": ["news"]
 }

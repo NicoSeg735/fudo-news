@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1722531525356,
+  "timestamp": 1722534499877,
   "index": "/fudo-news/index.csr.html",
   "assetGroups": [
     {
@@ -45,9 +45,9 @@
     {
       "name": "news-api",
       "patterns": [
-        "https:\\/\\/newsapi\\.org\\/v2\\/everything\\?q=restaurant"
+        "https:\\/\\/newsapi\\.org\\/v2\\/.*"
       ],
-      "strategy": "freshness",
+      "strategy": "performance",
       "maxSize": 100,
       "maxAge": 86400000,
       "timeoutMs": 10000,
@@ -70,7 +70,7 @@
     "/fudo-news/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
     "/fudo-news/index.html": "e60c5cf81917bba9c5f80055797c699c0be8b5aa",
     "/fudo-news/main-WU7DJJ4D.js": "bd13755fe2f5cbba269f0f982a04a5dbe049f257",
-    "/fudo-news/manifest.webmanifest": "de716169a522d44f4b196e7e920510720de3930a",
+    "/fudo-news/manifest.webmanifest": "84b700ae67f3b62d0c08bcd0bc65f0949756a773",
     "/fudo-news/polyfills-SCHOHYNV.js": "d45c76c5960bab3ace7fd6d211b9579456241f8a",
     "/fudo-news/styles-VW447UFM.css": "946b30014e9e00ef948a1715768a19849082cd9f"
   },
