@@ -6,6 +6,10 @@ FudoNews es una aplicación web para ver noticias, desarrollada como parte de un
 
 Puedes ver la demo del proyecto en el siguiente enlace: [FudoNews Demo](https://nicoseg735.github.io/fudo-news/)
 
+## Demo local como PWA
+
+Ejecuta `yarn deploy-dev` para iniciar la aplicación en modo producción para probar las funciones que ofrece como PWA (Progressive Web Application).
+
 ## Servidor de desarrollo
 
 Ejecuta `ng serve` para iniciar un servidor de desarrollo. Navega a `http://localhost:4200/`. La aplicación se recargará automáticamente si cambias alguno de los archivos fuente.

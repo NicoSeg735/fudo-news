@@ -1,18 +1,10 @@
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 8px 16px;
   background-color: white;
-
-  div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    width: 100%;
-    max-width: 800px;
-  }
+  width: 100%;
 }
 
 nav > ul {
@@ -21,6 +13,16 @@ nav > ul {
 
 nav > ul > li {
   color: white;
+}
+
+.header-box {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 800px;
 }
 
 .logo-container {
@@ -39,8 +41,20 @@ nav > ul > li {
   margin-right:-6px;
 }
 
+.offline-banner {
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 12px;
+}
+
 @media (min-width: 600px) {
-  .container {
+  .header-box {
+    padding: 8px 24px;
+  }
+  .offline-banner {
     padding: 8px 24px;
   }
 }

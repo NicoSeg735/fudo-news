@@ -17,7 +17,9 @@ export class ErrorDialogComponent implements OnInit {
     404: 'No pudimos encontrar la página que buscabas.',
     500: 'Ocurrió un error interno en el servidor.',
     401: 'No tienes permisos para acceder a esta página.',
-    429: 'Demasiadas solicitudes. Intenta de nuevo más tarde.'
+    429: 'Demasiadas solicitudes. Intenta de nuevo más tarde.',
+    503: 'El servidor no está disponible en este momento.',
+    504: 'El servidor tardó demasiado. Puede que no estés conectado a internet.'
   }
 
   constructor(private router: Router) {}

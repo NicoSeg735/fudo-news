@@ -1,5 +1,10 @@
 <header class="container">
-  <div>
+  @if (!isOnline) {
+    <div class="offline-banner">
+      <p>Estás desconectado. Por favor, revisa tu conexión a internet.</p>
+    </div>
+  }
+  <div class="header-box">
     <a class="logo-container" routerLink="/">
       <img src="assets/img/fudo_logo.svg" height="18" alt="FUDO logo" />
       <span>News!</span>
