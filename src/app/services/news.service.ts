@@ -24,12 +24,9 @@ export class NewsService {
       .set('apiKey', this.API_KEY)
 
     return this.http
-      .get<INewsResult>(
-        `${this.API_URL}everything?q=${query ?? 'restaurant'}`,
-        {
-          params
-        }
-      )
+      .get<INewsResult>(`${this.API_URL}?q=${query ?? 'restaurant'}`, {
+        params
+      })
       .pipe(
         map((result: INewsResult) => {
           result.articles = result.articles
@@ -57,10 +54,9 @@ export class NewsService {
       .set('apiKey', this.API_KEY)
 
     return this.http
-      .get<INewsResult>(
-        `${this.API_URL}everything?q=${slug.replace(/-/g, '+')}`,
-        { params }
-      )
+      .get<INewsResult>(`${this.API_URL}?q=${slug.replace(/-/g, '+')}`, {
+        params
+      })
       .pipe(
         map((result: INewsResult) => {
           const articleFounded = result?.articles.find(

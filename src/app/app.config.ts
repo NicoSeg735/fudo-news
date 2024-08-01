@@ -1,7 +1,8 @@
 import {
   ApplicationConfig,
   importProvidersFrom,
-  provideZoneChangeDetection
+  provideZoneChangeDetection,
+  isDevMode
 } from '@angular/core'
 import { provideRouter } from '@angular/router'
 
@@ -14,6 +15,7 @@ import {
 } from '@angular/common/http'
 import { LucideAngularModule, Search, RotateCw, Link } from 'lucide-angular'
 import { errorHandlerInterceptor } from './interceptors/error-handler.interceptor'
+import { provideServiceWorker } from '@angular/service-worker'
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -21,6 +23,10 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideClientHydration(),
     provideHttpClient(withFetch(), withInterceptors([errorHandlerInterceptor])),
-    importProvidersFrom(LucideAngularModule.pick({ Search, RotateCw, Link }))
+    importProvidersFrom(LucideAngularModule.pick({ Search, RotateCw, Link })),
+    provideServiceWorker('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ]
 }
