@@ -30,7 +30,6 @@ nav > ul > li {
   gap: 2px;
   flex-direction: column;
   text-decoration: none;
-  color: currentColor !important;
 }
 
 .logo-container span {
@@ -38,14 +37,6 @@ nav > ul > li {
   font-size: 12px;
   letter-spacing:6px;
   margin-right:-6px;
-}
-
-.container > div > a {
-  color: currentColor;
-
-  &:visited {
-    color: currentColor !important;
-  }
 }
 
 @media (min-width: 600px) {

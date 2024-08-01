@@ -18,6 +18,7 @@ export class DetailComponent implements OnInit {
   public article: INew | null = null
   public error: { statusCode: number; message: string } | null = null
   public publishedFormattedDate!: string
+  public isLoading: boolean = true
 
   constructor(
     private route: ActivatedRoute,
@@ -26,10 +27,17 @@ export class DetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
+      this.isLoading = true
       const slug = params.get('slug')
       const source = params.get('source')
       if (slug && source) {
         this.getArticle(slug, source)
+      } else {
+        this.error = {
+          statusCode: 404,
+          message: 'Article not found'
+        }
+        this.isLoading = false
       }
     })
   }
@@ -38,16 +46,17 @@ export class DetailComponent implements OnInit {
     this.newsService.getArticleBySlugAndSource(slug, source).subscribe({
       next: (article: INew) => {
         this.article = article
-
         this.publishedFormattedDate = new Date(
           article.publishedAt
         ).toLocaleDateString()
+        this.isLoading = false
       },
       error: (error) => {
         this.error = {
           statusCode: error.statusCode,
           message: error.message
         }
+        this.isLoading = false
       }
     })
   }

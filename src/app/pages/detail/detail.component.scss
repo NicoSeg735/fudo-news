@@ -59,16 +59,24 @@ h1 {
   justify-content: start;
 }
 
-.source > a {
-  text-decoration: none;
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  div {
+    animation: spin 1s linear infinite;
 
-  &:visited {
-    color: currentColor;
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
   }
 
-  &:hover {
+  lucide-icon {
     color: $primary-color;
-    text-decoration: underline;
   }
 }
 
