@@ -23,21 +23,14 @@ nav > ul > li {
   color: white;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
-  color: currentColor;
-}
-
 .logo-container {
   display: flex;
   align-items: center;
   justify-items: center;
   gap: 2px;
   flex-direction: column;
+  text-decoration: none;
+  color: currentColor !important;
 }
 
 .logo-container span {
@@ -45,6 +38,14 @@ a:visited {
   font-size: 12px;
   letter-spacing:6px;
   margin-right:-6px;
+}
+
+.container > div > a {
+  color: currentColor;
+
+  &:visited {
+    color: currentColor !important;
+  }
 }
 
 @media (min-width: 600px) {
